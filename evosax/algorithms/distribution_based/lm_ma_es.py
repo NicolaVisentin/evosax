@@ -54,7 +54,7 @@ class LM_MA_ES(MA_ES):
 
         # Override or add LM-MA-ES specific parameters
         c_d = 1 / jnp.power(1.5, jnp.arange(self.m)) / self.num_dims
-        c_c = self.population_size / jnp.power(4, jnp.arange(self.m)) / self.num_dims
+        c_c = self.population_size / jnp.power(4.0, jnp.arange(self.m)) / self.num_dims
 
         # Set c_1 and c_mu to 0 as they're not used in LM-MA-ES
         return Params(
